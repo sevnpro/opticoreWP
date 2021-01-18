@@ -1,0 +1,463 @@
+/* Banner */
+.cn-modal-wrap * {
+    cursor: auto;
+}
+
+.cn-modal-wrap button:hover, .cn-trigger:hover {
+    cursor: pointer;
+}
+
+.cn-baner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding-left: 260px;
+    width: 100%;
+    z-index: 37;
+    transition: transform .6s ease .15s;
+    display: none;
+    pointer-events: none;
+}
+
+.cn-container {
+    max-width: 1070px;
+    display: flex;
+    flex-wrap: wrap;
+    background: #313131;
+    align-items: center;
+    padding: 7px 27px;
+    pointer-events: auto;
+}
+
+/*.cn-container p {*/
+/*    font-size: 16px;*/
+/*    line-height: 148%;*/
+/*    color: #000000;*/
+/*    flex: 1;*/
+/*}*/
+
+/*.cn-container > div {*/
+/*    flex: 0 0 auto;*/
+/*}*/
+
+/*.cn-container button {*/
+/*    font-family: 'Montserrat Bold', sans-serif;*/
+/*    color: #000000;*/
+/*    font-size: 14px;*/
+/*    letter-spacing: .06em;*/
+/*    text-transform: uppercase;*/
+/*}*/
+
+/*#cn-accept {*/
+/*    border: 2px solid #000000;*/
+/*    padding: 7px 14px;*/
+/*}*/
+
+/*#cn-settings {*/
+/*    margin-left: 8px;*/
+/*}*/
+
+.cn-baner.cn-banner-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Banner */
+
+/* Modal */
+.cn-modal-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .8s ease;
+}
+
+.cn-modal-scroll {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -webkit-backface-visibility: hidden;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.cn-modal-wrap:before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(249, 250, 253, 0.7);
+    position: fixed;
+}
+
+.cn-modal-open .cn-modal-wrap {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.cn-modal {
+    position: relative;
+    max-width: 1170px;
+    padding: 80px;
+    padding-bottom: 90px;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 0px 9.33333px 40px rgba(71, 77, 135, 0.1);
+    border-radius: 26.6667px;
+}
+
+.cn-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    z-index: 12;
+}
+
+.cn-header span {
+    display: block;
+    font-family: 'Poppins';
+    font-size: 50px;
+    line-height: 1.33;
+    color: #313134;
+    margin-bottom: 50px;
+}
+
+#cn-close {
+    border: none;
+    box-shadow: none;
+    background: none;
+    position: absolute;
+    right: -65px;
+    user-select: none;
+    cursor: pointer;
+    top: -65px;
+    outline: none;
+}
+
+#cn-close img {
+    background: none;
+    cursor: pointer;
+}
+
+
+#cn-close svg {
+    width: 40px;
+    height: 40px;
+    fill: #000000;
+    pointer-events: none;
+}
+
+.cn-content {
+    padding: 0;
+    position: relative;
+    z-index: 12;
+}
+
+.cn-option-wrap {
+    display: flex;
+    align-items: flex-start;
+}
+
+.cn-option-wrap .cn-checkbox {
+    flex: 0 0 auto;
+    margin-top: 7px;
+}
+
+.cn-text {
+    flex: 1;
+    padding: 0 0 0 23px;
+}
+
+.cn-option-list {
+    display: none;
+    margin-bottom: 24px;
+    transition: .5s;
+}
+
+.cn-option-title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.3;
+    color: #313134;
+    margin-bottom: 15px;
+}
+
+.cn-text p {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 160%;
+    color: #5F626F;
+    margin-bottom: 40px;
+}
+
+.cn-details {
+    font-family: 'Poppins';
+    color: #1B84F9;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 130%;
+    background: none;
+    border: none;
+    outline: none;
+    position: relative;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.cn-details svg {
+}
+
+.cn-details-open .cn-details svg {
+    transform: rotate(180deg);
+}
+
+.cn-option-list th {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 160%;
+    color: #5F626F;
+    text-align: left;
+}
+
+.cn-option-list td {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 160%;
+    color: #5F626F;
+}
+
+.cn-option-list tr th {
+    font-weight: 600;
+}
+
+.cn-option-list tr th:first-child {
+    width: 144px;
+}
+
+.cn-option-list tr th:nth-child(2) {
+    width: 166px;
+}
+
+.cn-option-list tr td:nth-child(2), .cn-option-list tr td:nth-child(3) {
+    padding: 12px 0 5px 0;
+}
+
+.cn-option-list.cn-description-list tr th {
+    padding: 0 0 13px 0;
+}
+
+.cn-option-list.cn-description-list tr th:first-child {
+    width: 180px;
+    padding-right: 15px;
+}
+
+.cn-option-list.cn-description-list tr th:nth-child(2) {
+    width: auto;
+}
+
+.cn-option-list.cn-description-list tr td:first-child {
+    padding: 0 15px 15px 0;
+}
+
+.cn-option-list.cn-description-list tr td:nth-child(2), .cn-option-list.cn-description-list tr td:nth-child(3) {
+    padding: 0 0 15px 0;
+}
+
+.cn-option-list.cn-description-list tr:not(:last-child) td {
+    padding: 0 0 15px 0;
+}
+
+#cn-save {
+    background: linear-gradient(89.02deg, #229AFA 1.68%, #1168F8 97.37%);
+    color: #ffffff;
+    box-shadow: 0px 7px 14px rgba(47, 93, 182, 0.2);
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 130%;
+    padding: 20px 35px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    text-transform: uppercase;
+}
+
+.cn-option-wrap a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color .5s;
+    text-decoration: none;
+}
+
+/* Modal */
+
+/* Chechbox */
+.cn-checkbox input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 0;
+}
+
+.cn-trigger {
+    position: relative;
+    width: 41px;
+    height: 24px;
+    border-radius: 100px;
+    transition: .2s;
+    padding: 0 4px;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    border: 2px solid #F9FAFD;
+}
+
+.cn-checkbox input:checked + .cn-trigger {
+    justify-content: flex-end;
+    background: linear-gradient(89.02deg, #229AFA 1.68%, #1168F8 97.37%);
+    border-color: transparent;
+}
+
+.cn-trigger:after {
+    content: '';
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    background: #E5E9F0;
+    transition: .2s;
+}
+.cn-checkbox input:checked + .cn-trigger:after{
+    background: #fff;
+}
+
+
+
+.cn-checkbox input:disabled + .cn-trigger {
+    cursor: not-allowed;
+}
+
+/* Chechbox */
+
+/* Response */
+
+@media (max-width: 1024px) {
+    .cn-modal {
+        padding: 50px 40px;
+    }
+
+    .cn-header span {
+        font-size: 42px;
+    }
+
+    .cn-header span {
+        margin-bottom: 40px;
+    }
+
+    .cn-option-title {
+        font-size: 24px;
+    }
+
+    .cn-text p {
+        font-size: 18px;
+    }
+
+    #cn-close {
+        top: -25px;
+        right: -25px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .cn-text {
+        flex: none;
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .cn-option-wrap {
+        flex-flow: wrap;
+    }
+
+    .cn-header span {
+        font-size: 28px;
+    }
+
+    .cn-modal {
+        padding: 40px 25px;
+    }
+
+    .cn-trigger {
+        margin-bottom: 20px;
+    }
+
+    .cn-details {
+        padding-left: 0;
+        margin-bottom: 50px;
+    }
+
+    .cn-header span {
+        margin-bottom: 30px;
+    }
+
+    .cn-option-list tr th {
+        display: none;
+    }
+
+    .cn-option-list.cn-description-list tr {
+        display: flex;
+        flex-flow: wrap;
+    }
+
+    .cn-option-list.cn-description-list tr td:first-child {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .cn-option-list td {
+        font-size: 16px;
+    }
+
+    .cn-details {
+        font-size: 16px;
+    }
+
+    #cn-save {
+        font-size: 14px;
+        padding: 15px 30px;
+    }
+
+    .cn-option-list tr {
+        display: flex;
+        flex-flow: wrap;
+    }
+
+    .cn-option-list .cn-trigger{
+        margin-bottom: 20px;
+        margin-right: 10px;
+        position: relative;
+        top: 10px;
+    }
+
+    .cn-option-list tr td:nth-child(2){
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+}
