@@ -5350,8 +5350,8 @@ svg, img {
 
 @media (min-width: 1660px) {
     .customizable__photo img, .customizable__photo svg {
-        width: 705px !important;
-        max-width: 705px;
+        width: 755px !important;
+        max-width: 765px;
         max-height: 524px
     }
 }
