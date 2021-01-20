@@ -2438,11 +2438,11 @@ svg, img {
 
 .intro__circle > img {
     position: absolute;
-    top: -17px
+    top: -17px;
     object-fit: contain;
 }
 
-@media (min-width: 1660px) {
+@media (max-width: 1660px) {
     .intro__circle > img {
         width: 100px;
         height: 30px;
