@@ -29,6 +29,23 @@
                 source: 'html',
                 selector: '#calculate__text'
             },
+            timeTitle: {
+                type: 'string',
+                source: 'html',
+                selector: '#calculate__timeTitle',
+            },
+            person: {
+                type: 'string',
+                source: 'attribute',
+                selector: '#calculate__personTitle',
+                attribute: 'data-person'
+            },
+            glasses: {
+                type: 'string',
+                source: 'attribute',
+                selector: '#calculate__glassesTitle',
+                attribute: 'data-glasses'
+            },
             week: {
                 type: 'string',
                 source: 'attribute',
@@ -169,6 +186,39 @@
                             el('h5', {},
                                 'Calculate Translate'
                             ),
+
+                            el(RichText, {
+                                tagName: 'p',
+                                placeholder: 'Time title...',
+                                keepPlaceholderOnFocus: true,
+                                value: attributes.timeTitle,
+                                allowedFormats: [],
+                                onChange: function (timeTitle) {
+                                    props.setAttributes({timeTitle: timeTitle});
+                                }
+                            }),
+                            el(RichText, {
+                                tagName: 'p',
+                                placeholder: 'Person title...',
+                                keepPlaceholderOnFocus: true,
+                                value: attributes.person,
+                                allowedFormats: [],
+                                onChange: function (person) {
+                                    props.setAttributes({person: person});
+                                }
+                            }),
+                            el(RichText, {
+                                tagName: 'p',
+                                placeholder: 'Glasses title...',
+                                keepPlaceholderOnFocus: true,
+                                value: attributes.glasses,
+                                allowedFormats: [],
+                                onChange: function (glasses) {
+                                    props.setAttributes({glasses: glasses});
+                                }
+                            }),
+
+
                             el(RichText, {
                                 tagName: 'p',
                                 placeholder: 'Week...',
@@ -242,8 +292,11 @@
                                     tagName: 'h3',
                                     value: attributes.titleCard1
                                 }),
-                                el('h5', {},
-                                    'Time periods'
+                                el(RichText.Content, {
+                                        tagName: 'h5',
+                                        id: 'calculate__timeTitle',
+                                        value: attributes.timeTitle
+                                    },
                                 ),
                                 el('div', {className: 'calculate__radios'},
                                     el('div', {className: 'calculate__radio active'},
@@ -301,8 +354,11 @@
                                     ),
                                 ),
                                 el('div', {className: 'calculate__store'},
-                                    el('p', {},
-                                        'Persons in a store:',
+                                    el('p', {
+                                            id: 'calculate__personTitle',
+                                            'data-person': attributes.person
+                                        },
+                                        attributes.person,
                                         el('span', {
                                                 id: 'calc',
                                             },
@@ -332,7 +388,7 @@
                                     value: attributes.titleCard2
                                 }),
                                 el('h5', {},
-                                    'Time periods'
+                                    attributes.timeTitle
                                 ),
                                 el('div', {className: 'calculate__radios'},
                                     el('div', {className: 'calculate__radio active'},
@@ -383,8 +439,11 @@
                                     ),
                                 ),
                                 el('div', {className: 'calculate__store'},
-                                    el('p', {},
-                                        'Glasses sales:',
+                                    el('p', {
+                                            id: 'calculate__glassesTitle',
+                                            'data-glasses': attributes.glasses
+                                        },
+                                        attributes.glasses,
                                         el('span', {
                                                 id: 'calc2',
                                             },
