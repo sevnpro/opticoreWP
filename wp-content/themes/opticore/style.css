@@ -1,0 +1,74 @@
+/*
+Theme Name:		Opticore
+Author:			Opticore
+Description:	Opticore Theme.
+Version:		1.0
+*/
+
+@media (min-width: 625px) {
+    html[lang="de-DE"] .intro__info .form input {
+        padding-right: 220px;
+    }
+
+    html[lang="de-DE"] .feature__info {
+        bottom: -10px;
+    }
+}
+
+@media (min-width: 1660px) {
+    .intro__info .form input {
+        padding-right: 250px;
+    }
+
+    html[lang="de-DE"] .intro__info .form input {
+        padding-right: 310px;
+    }
+}
+
+@media (max-width: 400px) {
+    html[lang="de-DE"] .feature__info {
+        top: -60px !important;
+    }
+}
+
+.preferences__item > h4 strong {
+    font-weight: 600;
+}
+
+.cn-baner {
+    display: block !important;
+}
+
+.menu__social {
+    z-index: 151;
+}
+
+
+.customizable__colors {
+    z-index: 9;
+}
+
+@media (max-width: 625px) {
+    .menu__nav {
+        z-index: 152;
+    }
+}
+
+.calculate__list.fade-on .calculate__item {
+    transition: 0s !important;
+}
+
+
+@media (min-width: 1660px) {
+    .customizable__item:nth-child(2) .customizable__photo {
+        left: 20px;
+    }
+}
+
+.customizable__item:nth-child(3) #customizable__content+img{
+    display: none !important;
+}
+
+.customizable__item .small-cart{
+    display: none !important;
+}

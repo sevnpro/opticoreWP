@@ -1,0 +1,63 @@
+/* Fonts */
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: bold;
+	src: local('Montserrat Bold'), local('Montserrat-Bold'), url('../fonts/MontserratBold.woff2') format('woff2');
+}
+/* Fonts */
+
+/* Dashboard widget */
+#dashboard-widgets-wrap .postbox {
+	border: none;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.09);
+}
+#dashboard-widgets-wrap h2.hndle {
+	font-family: 'Montserrat';
+	border-bottom: 1px solid #eaeaea;
+}
+.custom-admin-card {
+	padding: 20px 0;
+}
+.custom-admin-card-icon {
+	height: 60px;
+	margin: 0 auto 20px;
+	display: block;
+}
+.custom-admin-card-title {
+	font-family: 'Montserrat';
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 30px;
+    color: #071e57;
+	letter-spacing: 0.02em;
+}
+.custom-admin-card-btn {
+	display: flex;
+	justify-content: space-around;
+	max-width: 340px;
+	margin: 0 auto;
+}
+.custom-admin-card .button-widget {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: .375rem .8rem;
+    font-size: .9rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    background-color: #007bff;
+    color: #fff;
+    transition: background .2s ease-in-out;
+    min-width: 100px;
+}
+.custom-admin-card .button-widget:hover {
+    background-color: #0069d9;
+}
+/* Dashboard widget */
