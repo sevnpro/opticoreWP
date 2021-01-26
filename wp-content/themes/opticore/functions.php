@@ -187,15 +187,16 @@ function myprefix_setting_callback_function($val)
     $id = $val['id'];
     $option_name = $val['option_name'];
 ?>
-    <input type="text" name="<? echo $option_name ?>" id="<? echo $id ?>" value="<? echo esc_attr( get_option($option_name) ) ?>" />
-    <?
+    <input type="text" name="<?php echo $option_name ?>" id="<? echo $id ?>" value="<?php echo esc_attr(get_option($option_name)) ?>" />
+<?php
 }
 
-function add_option_field_to_general_admin_page1(){
+function add_option_field_to_general_admin_page1()
+{
     $option_name = 'my_option1';
 
     // регистрируем опцию
-    register_setting( 'general', $option_name );
+    register_setting('general', $option_name);
 
     // добавляем поле
     add_settings_field(
@@ -212,10 +213,11 @@ function add_option_field_to_general_admin_page1(){
 }
 add_action('admin_menu', 'add_option_field_to_general_admin_page1');
 
-function myprefix_setting_callback_function1( $val ){
+function myprefix_setting_callback_function1($val)
+{
     $id = $val['id'];
     $option_name = $val['option_name'];
-    ?>
+?>
     <input type="text" name="<?php echo $option_name ?>" id="<?php echo $id ?>" value="<?php echo esc_attr(get_option($option_name)) ?>" />
 <?php
 }
