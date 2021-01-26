@@ -20,20 +20,20 @@ add_filter('xmlrpc_enabled', '__return_false');
 
 //Admin only function
 if (!is_admin()) {
-//    wp_enqueue_script('jquery');
+    //    wp_enqueue_script('jquery');
     //jQuery deregister
-//    add_action('init', function () {
-//        wp_deregister_script('wp-embed'); //Deregister OEMBED js
-//        wp_deregister_script('jquery'); //Deregister WP jquery
-//    });
-//
-//    //Async and type script loading
-//    add_filter('script_loader_tag', function ($tag) {
-//        return str_replace("type='text/javascript'", "defer", $tag);
-//    }, 10, 2);
-//    add_filter('style_loader_tag', function ($tag) {
-//        return str_replace("type='text/css' ", "", $tag);
-//    }, 10, 2);
+    //    add_action('init', function () {
+    //        wp_deregister_script('wp-embed'); //Deregister OEMBED js
+    //        wp_deregister_script('jquery'); //Deregister WP jquery
+    //    });
+    //
+    //    //Async and type script loading
+    //    add_filter('script_loader_tag', function ($tag) {
+    //        return str_replace("type='text/javascript'", "defer", $tag);
+    //    }, 10, 2);
+    //    add_filter('style_loader_tag', function ($tag) {
+    //        return str_replace("type='text/css' ", "", $tag);
+    //    }, 10, 2);
 }
 //else {
 //Admin Dashboard
@@ -47,15 +47,12 @@ include_once('gutenberg/init.php');
 function theme_style()
 {
     $version = time();
-//    wp_enqueue_script('mainscripts', get_template_directory_uri() . '/src/js/app.min.js', array(), $version, true);
+    //    wp_enqueue_script('mainscripts', get_template_directory_uri() . '/src/js/app.min.js', array(), $version, true);
     wp_enqueue_script('jquery');
     wp_enqueue_script('mainscript', get_template_directory_uri() . '/js/script.js', array(), $version, true);
+    wp_enqueue_script('touch', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js', array(), $version, true);
     wp_enqueue_style('mainPageCss', get_template_directory_uri() . '/style.css', array(), $version);
     wp_enqueue_style('mainPageCssss', get_template_directory_uri() . '/src/css/app.min.css', array(), $version);
-
-
-
-
 }
 
 add_action('wp_enqueue_scripts', 'theme_style');
@@ -163,16 +160,17 @@ function new_excerpt_more($more)
 
 add_filter('excerpt_more', 'new_excerpt_more');
 
-function add_option_field_to_general_admin_page(){
+function add_option_field_to_general_admin_page()
+{
     $option_name = 'my_option';
 
     // регистрируем опцию
-    register_setting( 'general', $option_name );
+    register_setting('general', $option_name);
 
     // добавляем поле
     add_settings_field(
         'myprefix_setting-id',
-        'Phone',
+        'Facebook Link',
         'myprefix_setting_callback_function',
         'general',
         'default',
@@ -184,12 +182,112 @@ function add_option_field_to_general_admin_page(){
 }
 add_action('admin_menu', 'add_option_field_to_general_admin_page');
 
+function myprefix_setting_callback_function($val)
+{
+    $id = $val['id'];
+    $option_name = $val['option_name'];
+?>
+    <input type="text" name="<? echo $option_name ?>" id="<? echo $id ?>" value="<? echo esc_attr( get_option($option_name) ) ?>" />
+    <?
+}
+
+function add_option_field_to_general_admin_page1(){
+    $option_name = 'my_option1';
+
+    // регистрируем опцию
+    register_setting( 'general', $option_name );
+
+    // добавляем поле
+    add_settings_field(
+        'myprefix_setting-id1',
+        'Instagram Link',
+        'myprefix_setting_callback_function1',
+        'general',
+        'default',
+        array(
+            'id' => 'myprefix_setting-id1',
+            'option_name' => 'my_option1'
+        )
+    );
+}
+add_action('admin_menu', 'add_option_field_to_general_admin_page1');
+
+function myprefix_setting_callback_function1( $val ){
+    $id = $val['id'];
+    $option_name = $val['option_name'];
+    ?>
+    <input type="text" name="<?php echo $option_name ?>" id="<?php echo $id ?>" value="<?php echo esc_attr(get_option($option_name)) ?>" />
+<?php
+}
+
+function add_option_field_to_general_admin_page2()
+{
+    $option_name = 'my_option2';
+
+    // регистрируем опцию
+    register_setting('general', $option_name);
+
+    // добавляем поле
+    add_settings_field(
+        'myprefix_setting-id2',
+        'Linkedin Link',
+        'myprefix_setting_callback_function2',
+        'general',
+        'default',
+        array(
+            'id' => 'myprefix_setting-id2',
+            'option_name' => 'my_option2'
+        )
+    );
+}
+add_action('admin_menu', 'add_option_field_to_general_admin_page2');
+
+function myprefix_setting_callback_function2($val)
+{
+    $id = $val['id'];
+    $option_name = $val['option_name'];
+?>
+    <input type="text" name="<?php echo $option_name ?>" id="<?php echo $id ?>" value="<?php echo esc_attr(get_option($option_name)) ?>" />
+<?php
+}
+
+function add_option_field_to_general_admin_page3()
+{
+    $option_name = 'my_option3';
+
+    // регистрируем опцию
+    register_setting('general', $option_name);
+
+    // добавляем поле
+    add_settings_field(
+        'myprefix_setting-id3',
+        'Twitter Link',
+        'myprefix_setting_callback_function3',
+        'general',
+        'default',
+        array(
+            'id' => 'myprefix_setting-id3',
+            'option_name' => 'my_option3'
+        )
+    );
+}
+add_action('admin_menu', 'add_option_field_to_general_admin_page3');
+
+function myprefix_setting_callback_function3($val)
+{
+    $id = $val['id'];
+    $option_name = $val['option_name'];
+?>
+    <input type="text" name="<?php echo $option_name ?>" id="<?php echo $id ?>" value="<?php echo esc_attr(get_option($option_name)) ?>" />
+<?php
+}
+
 
 function jm_update_notice()
 {
-    remove_action( 'load-update-core.php', 'wp_update_plugins' );
+    remove_action('load-update-core.php', 'wp_update_plugins');
 }
-add_filter( 'pre_site_transient_update_plugins', '__return_null' );
+add_filter('pre_site_transient_update_plugins', '__return_null');
 
 
 function ultrabootstrap_setup()
