@@ -73,7 +73,7 @@
             $items = wp_get_nav_menu_items('footer');
             if (!empty($items)): ?>
                 <?php foreach ($items as $item): ?>
-                    <a href="<?php echo $item->url; ?>"><?php echo $item->post_title; ?></a>
+                    <a class="<?php echo implode( ' ', $item->classes); ?>" href="<?php echo $item->url; ?>"><?php echo $item->post_title; ?></a>
                 <?php endforeach; ?>
 
             <?php else: // Otherwise we show a message indicating that the menu has no elements

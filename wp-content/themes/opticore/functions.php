@@ -185,17 +185,17 @@ function add_option_field_to_general_admin_page(){
 }
 add_action('admin_menu', 'add_option_field_to_general_admin_page');
 
-function myprefix_setting_callback_function( $val ){
+function myprefix_setting_callback_function( $val ) {
     $id = $val['id'];
     $option_name = $val['option_name'];
     ?>
     <input
         type="text"
-        name="<? echo $option_name ?>"
-        id="<? echo $id ?>"
-        value="<? echo esc_attr( get_option($option_name) ) ?>"
+        name="<?php echo $option_name ?>"
+        id="<?php echo $id ?>"
+        value="<?php echo esc_attr( get_option($option_name) ) ?>"
     />
-    <?
+    <?php
 }
 
 function add_option_field_to_general_admin_page1(){
@@ -225,11 +225,11 @@ function myprefix_setting_callback_function1( $val ){
     ?>
     <input
             type="text"
-            name="<? echo $option_name ?>"
-            id="<? echo $id ?>"
-            value="<? echo esc_attr( get_option($option_name) ) ?>"
+            name="<?php echo $option_name ?>"
+            id="<?php echo $id ?>"
+            value="<?php echo esc_attr( get_option($option_name) ) ?>"
     />
-    <?
+    <?php
 }
 
 function add_option_field_to_general_admin_page2(){
@@ -259,11 +259,11 @@ function myprefix_setting_callback_function2( $val ){
     ?>
     <input
             type="text"
-            name="<? echo $option_name ?>"
-            id="<? echo $id ?>"
-            value="<? echo esc_attr( get_option($option_name) ) ?>"
+            name="<?php echo $option_name ?>"
+            id="<?php echo $id ?>"
+            value="<?php echo esc_attr( get_option($option_name) ) ?>"
     />
-    <?
+    <?php
 }
 
 function add_option_field_to_general_admin_page3(){
@@ -293,11 +293,11 @@ function myprefix_setting_callback_function3( $val ){
     ?>
     <input
             type="text"
-            name="<? echo $option_name ?>"
-            id="<? echo $id ?>"
-            value="<? echo esc_attr( get_option($option_name) ) ?>"
+            name="<?php echo $option_name ?>"
+            id="<?php echo $id ?>"
+            value="<?php echo esc_attr( get_option($option_name) ) ?>"
     />
-    <?
+    <?php
 }
 
 
