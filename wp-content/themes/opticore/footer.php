@@ -82,7 +82,7 @@
     </div>
 </footer>
 <div class="popup popup-contact ">
-    <div class="popup__body">
+    <form class="popup__body">
         <div class="popup__close">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.12117 5.70708C6.73064 5.31655 6.09748 5.31655 5.70696 5.70708C5.31643 6.0976 5.31643 6.73077 5.70696 7.12129L10.6567 12.0711L5.70698 17.0208C5.31646 17.4113 5.31646 18.0445 5.70698 18.435C6.09751 18.8255 6.73067 18.8255 7.1212 18.435L12.0709 13.4853L17.0207 18.435C17.4112 18.8255 18.0444 18.8255 18.4349 18.435C18.8254 18.0445 18.8254 17.4113 18.4349 17.0208L13.4851 12.0711L18.4349 7.12129C18.8254 6.73077 18.8254 6.0976 18.4349 5.70708C18.0444 5.31655 17.4112 5.31655 17.0207 5.70708L12.0709 10.6568L7.12117 5.70708Z"
@@ -101,11 +101,11 @@
         </svg>
         <input type="text" placeholder="<?php echo get_option('popup_2'); ?>">
         <a href="#" class="btn js-ripple"><?php echo get_option('popup_3'); ?></a>
-    </div>
+    </form>
 </div>
 
 <div class="popup popup-contactNew ">
-    <div class="popup__body">
+    <form class="popup__body">
         <div class="popup__close">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.12117 5.70708C6.73064 5.31655 6.09748 5.31655 5.70696 5.70708C5.31643 6.0976 5.31643 6.73077 5.70696 7.12129L10.6567 12.0711L5.70698 17.0208C5.31646 17.4113 5.31646 18.0445 5.70698 18.435C6.09751 18.8255 6.73067 18.8255 7.1212 18.435L12.0709 13.4853L17.0207 18.435C17.4112 18.8255 18.0444 18.8255 18.4349 18.435C18.8254 18.0445 18.8254 17.4113 18.4349 17.0208L13.4851 12.0711L18.4349 7.12129C18.8254 6.73077 18.8254 6.0976 18.4349 5.70708C18.0444 5.31655 17.4112 5.31655 17.0207 5.70708L12.0709 10.6568L7.12117 5.70708Z"
@@ -125,7 +125,7 @@
         <input type="text" placeholder="<?php echo get_option('popup_7'); ?>" class="mail">
         <a href="#" class="btn js-ripple"><?php echo get_option('popup_8'); ?></a>
         <p><?php echo get_option('popup_11'); ?> <strong><?php echo get_option('popup_12'); ?></strong></p>
-    </div>
+    </form>
 </div>
 
 <div class="popup popup-thank  ">
