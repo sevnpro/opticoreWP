@@ -3,7 +3,7 @@
 $email = $_POST['email'];
 $name = $_POST['name'];
 $phone = $_POST['phone'];
-$to = "dev@example.org";
+$to = "hello@cosmos.studio";
 $subject = "Send message Opticore";
 $txt = "
 Name: " . $name . "

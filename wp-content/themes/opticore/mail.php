@@ -1,7 +1,7 @@
 <?php
 
 $email = $_POST['email'];
-$to = "dev@example.org";
+$to = "hello@cosmos.studio";
 $subject = "Send message Opticore";
 $txt = "
 Email: " . $email . "";
