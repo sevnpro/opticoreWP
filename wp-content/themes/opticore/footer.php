@@ -93,16 +93,41 @@
         <div class="popup__img">
             <img src="<?php echo get_template_directory_uri(); ?>/src/img/popup.svg" alt="pop">
         </div>
-        <h4>Leave your email and we’ll contact you soon</h4>
+        <h4><?php echo get_option('popup_1'); ?></h4>
         <svg class="popup__decor" width="350" height="170" viewBox="0 0 350 170" fill="none"
              xmlns="http://www.w3.org/2000/svg">
             <path d="M350 170V0H211.144C198.172 0 187.721 14.1438 174.75 14.1438C161.779 14.1438 151.328 0 138.356 0H0V170H350Z"
                   fill="#F4F6F9"/>
         </svg>
-        <input type="text" placeholder="Enter your email address">
-        <a href="#" class="btn js-ripple">Digitalize now!</a>
+        <input type="text" placeholder="<?php echo get_option('popup_2'); ?>">
+        <a href="#" class="btn js-ripple"><?php echo get_option('popup_3'); ?></a>
     </div>
 </div>
+
+<div class="popup popup-contactNew ">
+    <div class="popup__body">
+        <div class="popup__close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.12117 5.70708C6.73064 5.31655 6.09748 5.31655 5.70696 5.70708C5.31643 6.0976 5.31643 6.73077 5.70696 7.12129L10.6567 12.0711L5.70698 17.0208C5.31646 17.4113 5.31646 18.0445 5.70698 18.435C6.09751 18.8255 6.73067 18.8255 7.1212 18.435L12.0709 13.4853L17.0207 18.435C17.4112 18.8255 18.0444 18.8255 18.4349 18.435C18.8254 18.0445 18.8254 17.4113 18.4349 17.0208L13.4851 12.0711L18.4349 7.12129C18.8254 6.73077 18.8254 6.0976 18.4349 5.70708C18.0444 5.31655 17.4112 5.31655 17.0207 5.70708L12.0709 10.6568L7.12117 5.70708Z"
+                      fill="#A3B1CD"/>
+            </svg>
+
+        </div>
+        <div class="popup__img">
+            <img src="<?php echo get_template_directory_uri(); ?>/src/img/pop.svg" alt="pop">
+        </div>
+        <h4><?php echo get_option('popup_4'); ?></h4>
+        <svg class="popup__decor" width="466" height="435" viewBox="0 0 466 435" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M466 435V0H283.866C265.142 0 251.391 22.3542 232.667 22.3542C213.943 22.3542 200.193 0 181.468 0H0V435H466Z" fill="#F4F6F9"/>
+        </svg>
+        <input type="text" placeholder="<?php echo get_option('popup_5'); ?>" class="name">
+        <input type="text" placeholder="<?php echo get_option('popup_6'); ?>" class="phone">
+        <input type="text" placeholder="<?php echo get_option('popup_7'); ?>" class="mail">
+        <a href="#" class="btn js-ripple"><?php echo get_option('popup_8'); ?></a>
+        <p><?php echo get_option('popup_11'); ?> <strong><?php echo get_option('popup_12'); ?></strong></p>
+    </div>
+</div>
+
 <div class="popup popup-thank  ">
     <div class="popup__body">
         <div class="popup__close">
@@ -115,8 +140,8 @@
         <div class="popup__img">
             <img src="<?php echo get_template_directory_uri(); ?>/src/img/popup1.svg" alt="pop">
         </div>
-        <h4>Thank you!</h4>
-        <p>Our sales team will get back to you soon</p>
+        <h4><?php echo get_option('popup_9'); ?></h4>
+        <p><?php echo get_option('popup_10'); ?></p>
     </div>
 </div>
 

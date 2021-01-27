@@ -9,7 +9,7 @@ jQuery(function ($) {
 
     $("#started__link").on("click" , function (e) {
         e.preventDefault()
-        $(".popup-contact").addClass("open")
+        $(".popup-contactNew").addClass("open")
     })
 })
 

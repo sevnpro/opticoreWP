@@ -37,113 +37,131 @@
 <?php if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome-Lighthouse')) {
 
 } else { ?>
+    <style>
+
+
+        .preloader .svg-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-75px, -34px);
+        }
+
+        .preloader .svg-container svg {
+            position: absolute;
+        }
+
+        .preloader .bg {
+            width: 100%;
+            height: 100%;
+            pointer-events: auto;
+            background: #f0f2f5;
+        }
+
+        .mlg_circle-1,
+        .mlg_circle-2a,
+        .mlg_circle-2b {
+            position: relative;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-duration: 1.5s;
+        }
+
+        .mlg_circle-1 {
+            animation-name: mlg_canim-1;
+        }
+
+        .mlg_circle-2a {
+            animation-name: mlg_canim-2a;
+        }
+
+        .mlg_circle-2b {
+            animation-name: mlg_canim-2b;
+        }
+
+        @keyframes mlg_canim-1 {
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-37px);
+            }
+
+            50% {
+                transform: translateX(75px);
+            }
+
+            100% {
+                transform: translate3d(0, 0, 1);
+            }
+        }
+
+        @keyframes mlg_canim-2a {
+            0% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+            25% {
+                transform: translateX(37px);
+                opacity: 0;
+            }
+
+            50% {
+                transform: translateX(-37px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translate3d(0, 0, 1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes mlg_canim-2b {
+            0% {
+                transform: translateX(0);
+                opacity: 0;
+            }
+
+            25% {
+                transform: translateX(37px);
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateX(-37px);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 0;
+            }
+        }
+    </style>
     <div class="preloader">
-        <div class="preloader__svg">
+        <div class="svg-container">
+            <svg class="mlg_circle-2b" width="150" height="68" viewBox="0 0 25 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M24.6003 8.23968C24.6004 8.2265 24.6004 8.21331 24.6004 8.20011C24.6004 8.18692 24.6004 8.17373 24.6003 8.16054V8.23968ZM16.4002 16.4002V0C11.8715 4.99938e-05 8.2002 3.67135 8.2002 8.20011C8.2002 12.7289 11.8715 16.4002 16.4002 16.4002Z" fill="url(#mlg_glinear-2)"></path>
+            </svg>
+
+            <svg width="150" class="mlg_circle-1" height="68" viewBox="0 0 25 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8.20011" cy="8.20011" r="8.20011" fill="url(#mlg_glinear-1)"></circle>
+            </svg>
+
+            <svg class="mlg_circle-2a" width="150" height="68" viewBox="0 0 25 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M24.6003 8.23968C24.6004 8.2265 24.6004 8.21331 24.6004 8.20011C24.6004 8.18692 24.6004 8.17373 24.6003 8.16054V8.23968ZM16.4002 16.4002V0C11.8715 4.99938e-05 8.2002 3.67135 8.2002 8.20011C8.2002 12.7289 11.8715 16.4002 16.4002 16.4002Z" fill="url(#mlg_glinear-2)"></path>
+            </svg>
+
             <svg width="150" height="68" viewBox="0 0 25 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <style type="text/css">
-                    .mlg_circle-1,
-                    .mlg_circle-2a,
-                    .mlg_circle-2b {
-                        position: relative;
-                        animation-timing-function: ease-in-out;
-                        animation-iteration-count: infinite;
-                        animation-duration: 1.5s;
-                    }
-
-                    .mlg_circle-1 {
-                        animation-name: mlg_canim-1;
-                    }
-
-                    .mlg_circle-2a {
-                        animation-name: mlg_canim-2a;
-                    }
-
-                    .mlg_circle-2b {
-                        animation-name: mlg_canim-2b;
-                    }
-
-                    @keyframes mlg_canim-1 {
-                        0% {
-                            transform: translateX(0);
-                        }
-
-                        25% {
-                            transform: translateX(-25%);
-                        }
-
-                        50% {
-                            transform: translateX(50%);
-                        }
-
-                        100% {
-                            transform: translateX(0);
-                            z-index: 1;
-                        }
-                    }
-
-                    @keyframes mlg_canim-2a {
-                        0% {
-                            transform: translateX(0);
-                            opacity: 1;
-                        }
-
-                        25% {
-                            transform: translateX(50%);
-                            opacity: 0;
-                        }
-
-                        50% {
-                            transform: translateX(-50%);
-                            opacity: 0;
-                        }
-
-                        100% {
-                            transform: translateX(0);
-                            opacity: 1;
-                        }
-                    }
-
-                    @keyframes mlg_canim-2b {
-                        0% {
-                            transform: translateX(0);
-                            opacity: 0;
-                        }
-
-                        25% {
-                            transform: translateX(50%);
-                            opacity: 1;
-                        }
-
-                        50% {
-                            transform: translateX(-50%);
-                            opacity: 1;
-                        }
-
-                        100% {
-                            transform: translateX(0);
-                            opacity: 0;
-                        }
-                    }
-                </style>
-                <g class="mlg_circle-2b">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M24.6003 8.23968C24.6004 8.2265 24.6004 8.21331 24.6004 8.20011C24.6004 8.18692 24.6004 8.17373 24.6003 8.16054V8.23968ZM16.4002 16.4002V0C11.8715 4.99938e-05 8.2002 3.67135 8.2002 8.20011C8.2002 12.7289 11.8715 16.4002 16.4002 16.4002Z"
-                          fill="url(#mlg_glinear-2)"></path>
-                </g>
-                <circle class="mlg_circle-1" cx="8.20011" cy="8.20011" r="8.20011" fill="url(#mlg_glinear-1)"></circle>
-                <g class="mlg_circle-2a">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M24.6003 8.23968C24.6004 8.2265 24.6004 8.21331 24.6004 8.20011C24.6004 8.18692 24.6004 8.17373 24.6003 8.16054V8.23968ZM16.4002 16.4002V0C11.8715 4.99938e-05 8.2002 3.67135 8.2002 8.20011C8.2002 12.7289 11.8715 16.4002 16.4002 16.4002Z"
-                          fill="url(#mlg_glinear-2)"></path>
-                </g>
                 <defs>
-                    <linearGradient id="mlg_glinear-1" x1="2.16942e-07" y1="8.23529" x2="16.4706" y2="8.23529"
-                                    gradientUnits="userSpaceOnUse">
+                    <linearGradient id="mlg_glinear-1" x1="2.16942e-07" y1="8.23529" x2="16.4706" y2="8.23529" gradientUnits="userSpaceOnUse">
                         <stop stop-color="#33EBF7"></stop>
                         <stop offset="1" stop-color="#3EA9F5"></stop>
                     </linearGradient>
-                    <linearGradient id="mlg_glinear-2" x1="8.27057" y1="8.23529" x2="24.7411" y2="8.23529"
-                                    gradientUnits="userSpaceOnUse">
+                    <linearGradient id="mlg_glinear-2" x1="8.27057" y1="8.23529" x2="24.7411" y2="8.23529" gradientUnits="userSpaceOnUse">
                         <stop stop-color="#3D6EF9"></stop>
                         <stop offset="0.0001" stop-color="#3D6EF9"></stop>
                         <stop offset="1" stop-color="#3D9FF9"></stop>

@@ -1076,7 +1076,7 @@ svg, img {
     }
 }
 
-@media (max-width: 464px) {
+@media (max-width: 414px) {
     .intro__hand {
         left: -8px;
         right: unset;

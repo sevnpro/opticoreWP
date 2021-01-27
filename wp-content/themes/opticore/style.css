@@ -5,6 +5,61 @@ Description:	Opticore Theme.
 Version:		1.0
 */
 
+.popup-contactNew .popup__body > input {
+    margin-bottom: 10px;
+}
+
+.popup-contactNew .popup__decor {
+    height: auto;
+}
+
+.popup-contactNew .popup__body > a {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.popup-contactNew .popup__body > p {
+    text-align: center;
+    font-size: 20px;
+    color: #5F626F;
+}
+
+@media (max-width: 1660px) {
+    .popup-contactNew .popup__body > p {
+        font-size: 16px;
+    }
+
+    .popup-contactNew .popup__body > a {
+        margin-bottom: 25px;
+    }
+
+    .popup-contactNew .popup__decor {
+        height: 334px;
+        bottom: -4px;
+        width: 100%;
+    }
+
+    .popup-contactNew .popup__body > input {
+        padding: 12px;
+    }
+
+    .popup-contactNew .popup__body {
+        padding-bottom: 25px;
+        padding-top: 25px;
+    }
+
+    .popup-contactNew .popup__close {
+        position: absolute;
+        right: 18px;
+        top: 18px;
+    }
+
+    .popup-contactNew .popup__img{
+        margin-bottom: 8px;
+    }
+}
+
+
 @media (min-width: 625px) {
     html[lang="de-DE"] .intro__info .form input {
         padding-right: 220px;
@@ -65,10 +120,10 @@ Version:		1.0
     }
 }
 
-.customizable__item:nth-child(3) #customizable__content+img{
+.customizable__item:nth-child(3) #customizable__content + img {
     display: none !important;
 }
 
-.customizable__item .small-cart{
+.customizable__item .small-cart {
     display: none !important;
 }
